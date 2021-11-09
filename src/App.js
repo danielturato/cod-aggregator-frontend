@@ -91,6 +91,12 @@ function App() {
                 })}
               </VStack>
            </Grid>
+          ): isLoading ? (
+            <Text mt="5">Queries can take up to 20 seconds to resolve</Text>
+          ): isError ? (
+            <Text color="red.400">
+              Server error. Please try again in a few secs.
+            </Text>
           ): (
             <Text mt="5">Queries can take up to 20 seconds to resolve</Text>
           )}
