@@ -8,8 +8,6 @@ export const Tournament = (props) => {
     const start = Date.now()
     const end = props.start_time * 1000
     const secs = Math.floor((end - start) / 1000)
-    //const diff = new Date(secs * 1000).toISOString().substr(11,8)
-    const days = Math.floor(secs / (3600 * 24))
 
     const d = Math.floor(secs / (3600 * 24));
     const h = Math.floor(secs % (3600 * 24) / 3600);
