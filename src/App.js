@@ -94,7 +94,7 @@ function App() {
               Server error. Please try again in a few secs.
             </Text>
           ): (
-            <Text mt="5">Queries can take up to 20 seconds to resolve</Text>
+            <Text mt="5">Queries can take up to 20 seconds to resolve. If you are getting no results, waits a few secs and try again.</Text>
           )}
           
         </Box>
@@ -109,7 +109,7 @@ const fetchTournaments = async (team_sizes, region) => {
       const resp = await axios.get(query);
       return resp.data
   } catch (err) {
-      console.error(err)
+      return []
   }
 }
 
