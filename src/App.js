@@ -19,8 +19,6 @@ import { useQuery } from 'react-query';
 import { Tournament } from './Tournament';
 
 const BASE_URL = "https://vanguard-api.herokuapp.com/tournaments?"
-axios.defaults.headers['Access-Control-Allow-Origin'] = "*"
-
 
 
 function App() {
@@ -111,7 +109,6 @@ const fetchTournaments = async (team_sizes, region) => {
 
   try {
       const resp = await axios.get(query);
-      console.log(resp.data)
       return resp.data
   } catch (err) {
       console.error(err)
