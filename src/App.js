@@ -79,7 +79,7 @@ function App() {
             <Text color="red.400">
               Server error. Please try again in a few secs.
             </Text>
-          ): data.length > 0 ? (
+          ): data & data.length > 0 ? (
             <Grid minH="100vh" p={10}>
               <VStack spacing={8}>
                 {data.map((t, idx)=> {
