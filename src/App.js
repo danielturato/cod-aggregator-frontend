@@ -94,7 +94,7 @@ function App() {
               Server error. Please try again in a few secs.
             </Text>
           ): (
-            <Text mt="5">Queries can take up to 20 seconds to resolve. If you are getting no results, waits a few secs and try again.</Text>
+            <Text mt="5">Queries can take up to 20 seconds to resolve. If you are getting 0 results, wait a few secs and try again.</Text>
           )}
           
         </Box>
