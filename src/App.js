@@ -19,7 +19,7 @@ import { useQuery } from 'react-query';
 import { Tournament } from './Tournament';
 
 const BASE_URL = "https://vanguard-api.herokuapp.com/tournaments?"
-
+axios.defaults.headers['Access-Control-Allow-Origin'] = "https://findcodtourneys.com/"
 
 function App() {
   const [region, setRegion] = React.useState("na")
@@ -36,7 +36,6 @@ function App() {
       isFetching,
   } = useQuery(['tournaments', teamSizes, region], async () =>  await fetchTournaments(teamSizes, region), {enabled: false, initialData: []})
 
-  console.log(data)
   return (
     <ChakraProvider theme={theme}>
         <Text size="lg" fontWeight={"bold"} ml="3">v0.1</Text>
